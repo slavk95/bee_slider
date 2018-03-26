@@ -32,8 +32,7 @@
 		}
 		.fluid_container {
 			margin: 0 auto;
-			max-width: 1000px;
-			width: 90%;
+			max-width: 100%;		
 		}
 	</style>
 
@@ -67,12 +66,6 @@
  
 </head>
 <body>
-	<div id="back_to_camera">
-    	<a href="http://www.pixedelic.com/plugins/camera/">&larr; Back to the Camera project</a>
-    </div><!-- #back_to_camera -->
-    <div id="back_to_camera">
-        <a href="http://www.pixedelic.com/plugins/camera/">&larr; Back to the Camera project</a>
-    </div><!-- #back_to_camera -->
     
 	<div class="fluid_container">
 
@@ -87,9 +80,12 @@
             </div>
             <div data-src="../images/icon/back.jpg">
                 <div class="camera_caption fadeFromBottom" id="camera_caption10">
-                     <p class="title">Успішний бізнес - це освіта. Освіта - це успішний бізнес!</p>
-                    <p class="ul-list">Чого не вистачає Вашому місту?</p>
-                    <p class="ul-list">Справжнього навчального закладу, який готує ІТ-шників “з нуля”.</p>
+                     <p class="title-sub">Успішний бізнес - це освіта.</p>
+                     <p class="title-sub title-sub-second">Освіта - це успішний бізнес!</p>
+                     <div class="wrap-first-slide-text">
+                        <p class="first-slide-text">Чого не вистачає Вашому місту?</p>
+                        <p class="first-slide-text">Справжнього навчального закладу, який готує ІТ-шників “з нуля”.</p>
+                    </div>
                 </div>
             </div>
             <div data-src="../images/icon/back.jpg">
@@ -288,69 +284,55 @@
         </div><!-- #camera_wrap_2 -->
     </div><!-- .fluid_container -->
     
+    
+
     <div class="nav" style="clear:both; display:block; height:35px"></div>
-    sdfdsfdsf
+
+
+
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<div id="slider">
+  <div id="custom-handle" class="ui-slider-handle"><!-- <span class="value-wrapper"><span class="value-output"></span> км/ч</span> -->
+  </div>
+</div>
+
+
+<!-- <p> -->
+  <!-- <label for="amount">Minimum number of bedrooms:</label> -->
+  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="slider-range-max"></div>
+
+
+
+
 
     <script type="text/javascript">
         
-        $(document).ready(function(){
-            var sliderWidth = $("#camera_wrap_2").width();
+        function strartSlider(){
             var tabs = $(".rslides_tabs");
-            tabs.width(sliderWidth-97);
-            $(".nav").width(sliderWidth);
+            var sliderWidth = $("#camera_wrap_2").width();
+            tabs.width(sliderWidth-110);
             $(".camera_commands").css("right",sliderWidth/2);
             $(".camera_prev").css("left",sliderWidth/2-300);
             $(".camera_next").css("right",sliderWidth/2-300);
-            $(".camera_bar_cont").css("background","#999999");
             $(".title-main").css("marginLeft",parseInt(getComputedStyle(tabs[0]).marginLeft) + 65+"px");
-            $("#pie_0").css("background","#336699");
+            $("#slider-range-max").css("top",-$(".nav").height()-34);
+        }
+        $(document).ready(function(){
             var buttonForFran = document.getElementsByClassName("rslides1_s11");
-
             $(".fran").css("top", parseInt(getComputedStyle(buttonForFran[0]).top) + 27 + "px");
             $(".openAcadem").css("top",parseInt(getComputedStyle(buttonForFran[0]).top) + 50 + "px")
             $(".school").css("top",parseInt(getComputedStyle(buttonForFran[0]).top) + 73 + "px");
+            
+            strartSlider();
 
             $(window).resize(function(){
-                var sliderWidth = $("#camera_wrap_2").width();
-                $(".rslides_tabs").width(sliderWidth);
+              strartSlider();
             })
-            document.getElementById("camera_wrap_2").style.marginBottom = "0px";
-            $("ul").click(function(event){
-                var target = event.target;
-                if (target.nodeName != 'IMG'){
-                    return;
-                }
-                else{
-                    // console.log((target.parentElement).id);
-                    // var elem = "#" + target.parentElement.id;
-                    // console.log();
-                    $(".rslides_tabs").css("display","none");
-                    // var wrap = "#divWrap"+parseInt(target.parentElement.id,10);
-                    // showInfo(wrap);
-                    $(".camera_caption > div").css("visibility","visible");
-                }
-
-            });
-            // function showInfo(wrap){
-            //     $(wrap).css("visibility","visible");                
-            // };            
-            $(".camera_next").click(function(){
-                $(".rslides_tabs").css("display","none");
-                $(".camera_caption div").css("visibility","visible");
-            });
-            $(".camera_prev").click(function(){
-               $(".rslides_tabs").css("display","none"); 
-               $(".camera_caption div").css("visibility","visible");
-            })
-            // $(".camera_stop").click(function(){
-            //     $(".rslides_tabs").css("display","block"); 
-            // })
-            $(".camera_play").click(function(){
-                $(".rslides_tabs").css("display","none"); 
-            })
-           
-          
-
         })
         
     </script>

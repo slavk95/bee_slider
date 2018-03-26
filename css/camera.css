@@ -131,6 +131,9 @@
 	top: 0;
 	z-index: 3;
 	height: 10px !important;
+	width: 70%;
+	margin: 0 auto;
+	display: none;
 }
 .camera_thumbs_wrap.camera_left .camera_bar, .camera_thumbs_wrap.camera_right .camera_bar {
 	height: 100%;
@@ -328,10 +331,13 @@
     background-position-x: 0px !important;
 }
 .camera_commands > .camera_stop {
-	background: url(../images/camera_skins.png) no-repeat -120px 0;
+	background: url(../images/icon/pause.png);
 	display: block;
 	height: 40px;
-	width: 40px;;
+	width: 40px;
+	background-position-y: 11px !important;
+    background-repeat: no-repeat;
+    background-position-x: 0px !important;
 }
 .camera_wrap .camera_pag .camera_pag_ul li {
 	-webkit-border-radius: 8px;
@@ -1755,6 +1761,7 @@ IMG {
 .nav{
 	background: #688cad;
 	margin: 0 auto;
+	width: 70%
 }
 #pie_0{
 	opacity: 1 !important;
@@ -1780,4 +1787,74 @@ IMG {
 }
 .rslides1_s19{
 	display: none !important;
+}
+.ui-slider-horizontal .ui-slider-range-max{
+	background: rgb(153, 153, 153);
+}
+
+.ui-widget.ui-widget-content{
+	background: #336699;
+	width: 70%;
+    margin: 0 auto;
+}
+/*.ui-slider-handle{
+	display: none;
+}*/
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+	border-radius: unset !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+	border: none !important;
+	background: none !important;
+}
+.ui-slider .ui-slider-handle{
+	width: 0 !important;
+	height: 0 !important;
+}
+/*#slider-range-max{
+	top: -122px;
+}*/
+#amount{
+	display: none;
+}
+#slider3-pager{
+	display: block;
+}
+#camera_caption10{
+	background: #2388db;
+}
+#divWrap1{
+	background: unset;
+	margin-top: 65px;;
+}
+.title-sub{
+	color: white;
+    font-size: 59px;;
+    text-align: center;
+	margin-bottom: 2px;;;;
+}
+.first-slide-text{
+	font-style: italic;
+	font-size: 28px;
+    padding-top: 0 !important;
+	margin-bottom: 5px;;
+}
+.title-sub-second{
+	padding-left: 183px;
+	margin-bottom: 64px;;;;
+
+}
+.wrap-first-slide-text{
+	margin-left: 50px;
+	color: #403d3d;;;;
+
+}
+.camera_bar_cont{
+	background: #999999;
+}
+#pie_0{
+	background: #336699;
+}
+#camera_wrap_2{
+	margin-bottom: 0px !important;
 }

@@ -85,23 +85,12 @@
 		
 ////////callbacks
 
-		onEndTransition		: function() {sliderSwitchFlug++; 
-			
-			// if (sliderSwitchFlug>1) {
+		onEndTransition		: function() {
 				$(".camera_caption div").css("visibility","visible");
-			// }
-			if (onShow) {
-				showBlock();
-				onShow = false;
-
-			}
-
-			if (firstBlockShowing) {
-				$("#cameraContent0").addClass("showFirstSlide");
-				firstBlockShowing = false;
-			}
-
-
+				if (firstBlockShowing) {
+					$("#cameraContent0").addClass("showFirstSlide");
+					firstBlockShowing = false;
+				}
 	},	//this callback is invoked when the transition effect ends
 
 		onLoaded			: function() {},	//this callback is invoked when the image on a slide has completely loaded
@@ -110,40 +99,28 @@
 		
 		onStartTransition	: function() {
 			$("#cameraContent0").removeClass("showFirstSlide");
-			console.log("hide");
 			hideMenuWithOutActionCount++;
-			if (hideMenuWithOutActionCount>1) {
-				console.log("hide");
-				$(".rslides_tabs").css("display","none");				
-			}
 		}	//this callback is invoked when the transition effect starts
 
     };
 	
-	var sliderSwitchFlug = 0, onShow = false, firstBlockShowing = true, hideMenuWithOutActionCount=0;
-	function showBlock(){
-		var cameraSlide = document.getElementsByClassName("cameraSlide");
-		for (var i = 0; i < cameraCaption.length; i++) {
-                    if(Number(cameraCaption[i].id.replace(/\D+/g,"")) == currentButton){
-                    	console.log(currentButton);
-                    	cameraSlide[i].classList.add("cameracurrent");
-                        cameraCaption[i].parentElement.style.display = "block";
-                        cameraCaption[i].parentElement.classList.add("cameracurrent");
-                    }
-                    else{
-                        cameraCaption[i].parentElement.style.display = "none";
-                        cameraCaption[i].parentElement.classList.remove("cameracurrent");
-                        cameraSlide[i].classList.remove("cameracurrent");
-                    }
-                }
-	}
-		var cameraCaption = document.getElementsByClassName("camera_caption"),currentButton=0;
-		$(document).ready(function(){			
-			$(".rslides_tabs > li").click(function(event){
-                onShow = true;
-               currentButton = Number(event.currentTarget.id.replace(/\D+/g,""));
-           })
-		})
+	var sliderSwitchFlug = 0, firstBlockShowing = true, hideMenuWithOutActionCount=0;
+
+	
+		 $( function() {
+                $( "#slider-range-max" ).slider({
+                  range: "max",
+                  min: 1,
+                  max: 19,
+                  value: 1,
+                  slide: function( event, ui ) {
+                    $( "#amount" ).val( ui.value );
+                    nextSlide($( "#amount" ).val( ui.value )[0].value);
+                  }
+                });
+                    $( "#amount" ).val( $( "#slider-range-max" ).slider( "value"));
+              } );
+		var cameraCaption = document.getElementsByClassName("camera_caption");
 		 
 	function isMobile() {
 		if( navigator.userAgent.match(/Android/i) ||
@@ -990,8 +967,7 @@
 	
 	
 		if($(thumbs).length) {
-			var thumbUrl;
-			//var arrItem = [10,2,16,8,11,3,17,5,7,1,9,0,12,14,15,13,4,6];
+			var thumbUrl;		
 			if(!$(pagination).length) {
 				$(thumbs).append('<div />');
 				$(thumbs).before('<div class="camera_prevThumbs hideNav"><div></div></div>').before('<div class="camera_nextThumbs hideNav"><div></div></div>');
@@ -1133,26 +1109,57 @@
 		
 		nextSlide();
 		
-	
+	var previousSlide = null;
+	var countNext = 1;   
+    $(".camera_next").click(function(){
+        if (countNext) {
+            $(".rslides_tabs").css("display","none");
+            $(".camera_caption div").css("visibility","visible");    
+            countNext = 0;
+        } 
+    })
 	/*************************** FUNCTION nextSlide() ***************************/
-	var flag = 0;
 	function nextSlide(navSlide){ 
-		flag++;
+		if (navSlide== undefined && previousSlide == 19) {
+			navSlide = 1;
+			countNext = 1;	
+			var idForButtonLogo = "divWrap" + navSlide;
+		}
+		if (navSlide !== undefined) {
+			previousSlide = navSlide;
+			$( "#amount" ).val(navSlide);
+			if(navSlide == 1){
+				$("#slider3-pager").css("display","block");
+				$(".ui-slider-handle").css("left", "0%");
+				$(".ui-slider-range").css("width", "100%");
+			}
+			else{
+				$("#slider3-pager").css("display","none");
+				$(".ui-slider-handle").css("left", navSlide*100/19 + "%");					
+				$(".ui-slider-range").css("width", 100-navSlide*100/19 + "%");
+			}
+		}
+		else{
+			$("#slider3-pager").css("display","none");
+			$( "#amount" ).val(previousSlide+1);
+			$(".ui-slider-handle").css("left", (previousSlide+1)*100/19 + "%");
+			$(".ui-slider-range").css("width", 100-(previousSlide+1)*100/19 + "%");
+			previousSlide++;
+		}
+
 		elem.addClass('camerasliding');
 		videoPresent = false;
 		var vis = parseFloat($('div.cameraSlide.cameracurrent',target).index());
-		console.log(vis);
 		var cameraCaption = $(".camera_caption");
-
 		if(navSlide>0){ 
 			var slideI = navSlide-1;
-		} else if (vis == amountSlide-1) { 
+		}
+		else if (vis == amountSlide-1){ 
 			var slideI = 0;
-		} else {
+		} 
+		else {
 			var slideI = vis+1;
 		}
-		
-				
 		var slide = $('.cameraSlide:eq('+slideI+')',target);
 		var slideNext = $('.cameraSlide:eq('+(slideI+1)+')',target).addClass('cameranext');
 		if( vis != slideI+1 ) {
@@ -2145,10 +2152,6 @@
 
 
 			});
-				
-				
-				
-	 
 		}
 	}
 
@@ -2245,9 +2248,14 @@
 				if($(thumbs).length) {
 
 					$('.pix_thumb',thumbs).click(function(event){
+						var slide = 0;
 						if(!elem.hasClass('camerasliding')){
 							var idNum = Number(event.currentTarget.id.replace(/\D+/g,""));
-							console.log(idNum);
+								for (var i = 0; i < cameraCaption.length; i++) {					
+				                    if(Number(cameraCaption[i].id.replace(/\D+/g,"")) == idNum){
+				                     	slide = Number(cameraCaption[i].childNodes["0"].id.replace(/\D+/g,""))+1;
+				                    }
+		                		}							
 							var curNum = parseFloat($('.cameracurrent',target).index());
 							if(idNum!=curNum) {
 								clearInterval(u);
@@ -2256,7 +2264,7 @@
 								$('.pix_thumb',thumbs).removeClass('cameracurrent');
 								$(this).parents('li').addClass('cameracurrent');
 								canvasLoader();
-								nextSlide(idNum+1);
+								nextSlide(slide);
 								thumbnailPos();
 								opts.onStartLoading.call(this);
 							}

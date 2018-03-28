@@ -47,7 +47,6 @@
 	height: 100%;
 	position: relative;
 	width: 100%;
-	z-index: 1;
 }
 .cameraSlide {
 	bottom: -35px;;
@@ -314,9 +313,9 @@
 	display: block;
 	height: 40px;
 	width: 40px;
-	background-position-y: 11px !important;
     background-repeat: no-repeat;
-    background-position-x: 0px !important;
+	background-position-x: 0px !important;
+	background-position-y: 11px !important;
 }
 .camera_commands {
 	right: 449px;
@@ -1658,7 +1657,7 @@ IMG {
 }
 .title{
 	margin: 0;
-	font-size: 27px;
+	font-size: 38px;
 	background: #5e82a8;
 	padding-left: 20px;
 	padding-top: 10px;
@@ -1668,10 +1667,11 @@ IMG {
 .ul-list{
 	color: black;
 	list-style: disc !important;
-	width: 64%;
+	width: 56%;
     margin: 0 auto !important;
-    padding-top: 30px !important;
     color: #193a5d;
+	font-size: 24px !important;
+	padding-top: 44px !important;;
 }
 .showFirstSlide{
 	display: block !important;
@@ -1857,4 +1857,553 @@ IMG {
 }
 #camera_wrap_2{
 	margin-bottom: 0px !important;
+}
+.ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-max:hover {
+    cursor: pointer;
+}
+.rslides_tabs li:hover{
+	cursor: pointer;
+}
+#divWrap10{
+	    padding-top: 0 !important;
+    font-size: 22px !important;
+}
+.next-in-slide{
+	bottom: 20px;
+	right: 0px !important;
+	height: 70px;
+	width: 70px;
+	opacity: .4;
+}
+
+.next-in-slide{
+	bottom: 20px;
+	right: 0px !important;
+	height: 100px;
+	width: 100px;
+	opacity: .4;
+}
+#divWrap10 .ul-list{
+    font-size: 22px !important;
+    padding-top: 12px !important;
+}
+.next-in-slide span, .prev-in-slide span{
+	background-color: #29578a !important;
+}
+.next-in-slide:hover,.prev-in-slide:hover{
+	opacity: 1;
+}
+
+
+
+
+
+
+
+#second-slide-next, 
+#third-slide-next,
+#fourth-slide-next,
+#fifth-slide-next,
+#sixth-slide-next,
+#seventh-slide-next,
+#eighth-slide-next,
+#ninth-slide-next,
+#tenth-slide-next,
+#eleventh-slide-next,
+#twelfth-slide-next,
+#thirteenth-slide-next,
+#fourteenth-slide-next,
+#fifteenth-slide-next,
+#sixteenth-slide-next,
+#seventeenth-slide-next,
+#eighteenth-slide-next
+{
+	height: 100px;
+	width: 100px;
+	position: relative;
+	overflow: hidden;
+	background: none;;
+}
+#second-slide-next:before{
+	content: "";
+	background-position-x: 30px !important;background-repeat:  no-repeat;
+	background-position-y: 30px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/idea_next.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#third-slide-next:before{
+	content: "";
+	background-position-x: 26px !important;background-repeat:  no-repeat;
+	background-position-y: 28px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/achievements_next.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#fourth-slide-next:before{
+	content: "";
+	background-position-x: 23px !important;background-repeat:  no-repeat;
+	background-position-y: 29px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/8_next.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+
+
+
+
+#fifth-slide-next:before{
+	content: "";
+	background-position-x: 25px !important;background-repeat:  no-repeat;
+	background-position-y: 26px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/11.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#sixth-slide-next:before{
+	content: "";
+	background-position-x: 27px !important;background-repeat:  no-repeat;
+	background-position-y: 28px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/3.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#seventh-slide-next:before{
+	content: "";
+	background-position-x: 31px !important;background-repeat:  no-repeat;
+	background-position-y: 29px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/17.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;
+	background-color: white;;;
+}
+#eighth-slide-next:before{
+	content: "";
+	background-position-x: 33px !important;background-repeat:  no-repeat;
+	background-position-y: 33px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/5.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#ninth-slide-next:before{
+	content: "";
+	background-position-x: 29px !important;background-repeat:  no-repeat;
+	background-position-y: 21px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/7.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;
+	background-color: white;;;
+}
+#tenth-slide-next:before{
+	content: "";
+	background-position-x: 30px !important;background-repeat:  no-repeat;
+	background-position-y: 29px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/1.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#eleventh-slide-next:before{
+	content: "";
+	background-position-x: 20px !important;background-repeat:  no-repeat;
+	background-position-y: 33px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/9.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#twelfth-slide-next:before{
+	content: "";
+	background-position-x: 28px !important;background-repeat:  no-repeat;
+	background-position-y: 31px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/0.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;
+	background-color: white;;;
+}
+#thirteenth-slide-next:before{
+	content: "";
+	background-position-x: 26px !important;background-repeat:  no-repeat;
+	background-position-y: 29px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/12.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#fourteenth-slide-next:before{
+	content: "";
+	background-position-x: 30px !important;background-repeat:  no-repeat;
+	background-position-y: 31px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/14.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#fifteenth-slide-next:before{
+	content: "";
+	background-position-x: 28px !important;background-repeat:  no-repeat;
+	background-position-y: 29px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/15.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#sixteenth-slide-next:before{
+	content: "";
+	background-position-x: 24px !important;background-repeat:  no-repeat;
+	background-position-y: 29px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/13.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;
+	background-color: white;;;
+}
+#seventeenth-slide-next:before{
+	content: "";
+	background-position-x: 31px !important;background-repeat:  no-repeat;
+	background-position-y: 32px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/4.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+#eighteenth-slide-next:before{
+	content: "";
+	background-position-x: 32px !important;background-repeat:  no-repeat;
+	background-position-y: 33px !important;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../images/icon/6.png);
+	transform: rotate(-30deg);
+	height: 100px;
+	width: 100px;;
+}
+
+.prev-in-slide{
+	height: 370px;
+	width: 185px;
+	opacity: .4;
+	left: 0px !important;
+	z-index: 0;
+	bottom: -12px;
+	overflow: hidden;
+	transform: rotate(180deg);;;
+	/* right: 0px !important; */;
+
+}
+
+
+
+#second-slide-prev, 
+#third-slide-prev,
+#fourth-slide-prev,
+#fifth-slide-prev,
+#sixth-slide-prev,
+#seventh-slide-prev,
+#eighth-slide-prev,
+#ninth-slide-prev,
+#tenth-slide-prev,
+#eleventh-slide-prev,
+#twelfth-slide-prev,
+#thirteenth-slide-prev,
+#fourteenth-slide-prev,
+#fifteenth-slide-prev,
+#sixteenth-slide-prev,
+#seventeenth-slide-prev,
+#eighteenth-slide-prev,
+#nineteenth-slide-prev{
+	height: 300px;
+	width: 300px;
+	position: relative;
+	background: none;
+	overflow: hidden;;;;;
+}
+
+
+
+
+
+
+
+
+
+#second-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 151px !important;;
+	background-image: url(../images/icon/start_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#third-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 161px !important;;
+	background-image: url(../images/icon/idea_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#fourth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 129px !important;;
+	background-image: url(../images/icon/8_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#fifth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/8_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#sixth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/Business_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#seventh-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/work_copy_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#eighth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/Indexes_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#ninth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 129px !important;;
+	background-image: url(../images/icon/Jim_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);
+	background-color: white;;;
+}
+#tenth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/Finance_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#eleventh-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 129px !important;;
+	background-image: url(../images/icon/You_Interest_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);
+	background-color: white;;;
+}
+#twelfth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/My_Interest_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#thirteenth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/Judje_model_copy_2_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#fourteenth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 129px !important;;
+	background-image: url(../images/icon/Propositions_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);
+	background-color: white;;
+}
+#fifteenth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/Students_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#sixteenth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/Marketing_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#seventeenth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/Build_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+#eighteenth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/Business_Model_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);
+	background-color: white;;;
+}
+#nineteenth-slide-prev:before{
+	content: "";
+	background-position-x: 88px !important;
+	background-position-y: 155px !important;;
+	background-image: url(../images/icon/Plan_prev.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 370px;
+	width: 370px;
+	transform: rotate(150deg);;
+}
+.descr{
+	 display:none;
+    padding:10px;
+    -moz-box-shadow:0 5px 5px rgba(0,0,0,0.3);
+	 position:absolute;
+	 border-width:3px;
+	 border-style:solid;
+    border-radius:7px;
+    background-color:rgba(255,255,255,0.5);
+    color:#666666;
+	 border-color:#6b8db4;
+	 margin-left:-244px;
+	 margin-top:38px;
+    height:42px;
+    font-size:14px;
+}
+.next-in-slide:hover .descr{
+    display:block;
+    position:absolute;
+    top:120px;
+    z-index:9999;
+    width:400px;
+}
+
+.slide-next-desc:hover .descr{
+	z-index: 9999;
+	top: -9px;
+	position: absolute;
+	display: block;
+	width: 208px;;
+}
+.descr p{
+	color: #29578a;
+	margin-bottom: 0;
+	padding-top: 6px;;;
+	font-size:18px;
 }
